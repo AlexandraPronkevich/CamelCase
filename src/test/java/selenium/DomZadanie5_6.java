@@ -21,15 +21,10 @@ public class DomZadanie5_6 {
 
         driver.manage().window().maximize();
 
-        driver.get("https://www.google.com");
-        Thread.sleep( 5000);
+        driver.get("https://www.youtube.com/channel/UC4tlrTXCBw6NPZ9nCA3_s9w");
+        Thread.sleep( 1000);
 
-        WebElement element = driver.findElement(By.name("q"));
-        element.sendKeys("Java language");
-        Thread.sleep(5000);
-
-        element.submit();
-
+//
         System.out.println(driver.getTitle());
 
 //        driver.quit();

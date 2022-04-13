@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.sql.SQLOutput;
 import java.time.Duration;
 
     public class NewTest {
@@ -14,6 +15,7 @@ import java.time.Duration;
 
         @Test
         public void practiceTest() throws InterruptedException {
+            // стандартная для всех проектов ЧАСТЬ
 
             System.setProperty("webdriver.chrome.driver", "e:/ChromeDriver/chromedriver.exe");
 
@@ -22,33 +24,47 @@ import java.time.Duration;
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             driver.manage().window().maximize();
 
-            driver.get("https://selectorshub.com/xpath-practice-page/");
+            // СТАНДАРТНАЯ ЧАСТЬ
+
+            //Начало теста
+
+            driver.get("https://www.saucedemo.com/");
             Thread.sleep(3000);
 
+            // Проверка
+
             String titleActual = driver.getTitle();
-            String titleExpected = "XPath & cssSelector Practice Page with all scenarios – SelectorsHub";
+            String titleExpected = "Swag Labs";
 
             Assert.assertEquals(titleActual, titleExpected);
 
 
 //
-//        WebElement userEmail = driver.findElement(By.id("userId"));
-//        userEmail.sendKeys("test@test.com");
-//        Thread.sleep(3000);
+        WebElement userName = driver.findElement(By.id("user-name"));
+        userName.sendKeys("test@test.com");
+        Thread.sleep(1000);
 //
-//        WebElement password = driver.findElement(By.id("pass"));
-//        password.sendKeys("pass123");
-//        Thread.sleep(3000);
+        WebElement password = driver.findElement(By.id("password"));
+        password.sendKeys("pass123");
+        Thread.sleep(1000);
 //
-//        WebElement company = driver.findElement(By.name("company"));
-//        company.sendKeys("qa company");
-//        Thread.sleep(3000);
-//
-//        WebElement submit = driver.findElement(By.xpath("//input[@type='submit']"));
-//        submit.click();
-//        Thread.sleep(3000);
+        WebElement loginButton = driver.findElement(By.id("login-button"));
+        loginButton.click();
+        Thread.sleep(1000);
 
-//        driver.quit();
+        // ИЗВЛЕЧЕНИЕ ТЕКСТА ИЗ ЭЛЕМЕНТА НА СТРАНИЦЕ
+//
+        WebElement errorMessage = driver.findElement(By.xpath("//h3[@data-test='error']"));
+        String actualTextMessage = errorMessage.getText();
+
+        String expectedMessage = "Epic sadface: Username and password do not match any user in this service";
+
+        // Проверка текста сообщения
+            Assert.assertEquals(actualTextMessage, expectedMessage);
+            System.out.println("Текст сообщения об ошибке проверен");
+
+
+        driver.quit();
 
         }
 
