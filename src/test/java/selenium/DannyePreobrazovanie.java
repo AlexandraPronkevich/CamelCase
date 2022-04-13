@@ -34,7 +34,6 @@ public class DannyePreobrazovanie {
 //        System.out.println(d);
 
 
-
 //        int num1 = 6;
 //        int num2 = 8;
 //        if(num1>num2){
@@ -99,8 +98,30 @@ public class DannyePreobrazovanie {
         int y=2;
         int z = x<y? (x+y) : (x-y);
         System.out.println(z);
-                    }
-                }
+
+//        int a = 17;
+//        int b = 5;
+//        if (a == b){
+//            System.out.println("Числа a и b равны");
+//        } else if(a<b){
+//            System.out.println("Число a меньше b");
+//        }  else{
+//            System.out.println("Число b меньше a");
+
+//            int a = 17;
+//            int b = 5;
+//            if (a%2 = 0){
+//                System.out.println("Число a четное");
+//            } else if(a<b){
+//                System.out.println("Число a меньше b");
+//            }  else{
+//                System.out.println("Число b меньше a");
+
+
+    }
+
+}
+
 
 
 
