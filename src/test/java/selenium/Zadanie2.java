@@ -5,10 +5,17 @@ public class Zadanie2 {
 
         int a = 62;
         int b = 7;
-        int c = a % b;
-//        boolean d;
+        if (a % 2 ==0)
+        System.out.println("Число a  четное");
+        else
+        System.out.println("Число a нечетное ");
 
-        System.out.println("Сумма = " + c);
+        if (b % 2 ==0)
+        System.out.println("Число b  четное");
+        else
+        System.out.println("Число b нечетное ");
+
+
 //        System.out.println("Произведение = " + d);
     }
 }
