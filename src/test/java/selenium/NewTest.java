@@ -1,5 +1,6 @@
 package selenium;
 
+import base.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 import java.sql.SQLOutput;
 import java.time.Duration;
 
-    public class NewTest {
+    public class NewTest extends Base {
 
 
         @Test
@@ -18,11 +19,12 @@ import java.time.Duration;
             // стандартная для всех проектов ЧАСТЬ
 
             System.setProperty("webdriver.chrome.driver", "e:/ChromeDriver/chromedriver.exe");
-
-            WebDriver driver = new ChromeDriver();
-
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-            driver.manage().window().maximize();
+//
+//        WebDriver driver = new ChromeDriver();
+//
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//
+//        driver.manage().window().maximize();
 
             // СТАНДАРТНАЯ ЧАСТЬ
 
@@ -64,7 +66,7 @@ import java.time.Duration;
             System.out.println("Текст сообщения об ошибке проверен");
 
 
-        driver.quit();
+
 
         }
 

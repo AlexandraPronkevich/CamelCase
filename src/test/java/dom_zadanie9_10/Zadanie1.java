@@ -1,4 +1,4 @@
-package selenium;
+package dom_zadanie9_10;
 
 public class Zadanie1 {
     public static void main(String[] args) {

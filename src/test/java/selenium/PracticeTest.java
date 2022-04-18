@@ -1,5 +1,6 @@
 package selenium;
 
+import base.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,17 +10,17 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class PracticeTest {
+public class PracticeTest extends Base {
 
     @Test
     public void firstTest() throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "e:/ChromeDriver/chromedriver.exe");
-
-        WebDriver driver = new ChromeDriver();
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
+//        System.setProperty("webdriver.chrome.driver", "e:/ChromeDriver/chromedriver.exe");
+//
+//        WebDriver driver = new ChromeDriver();
+//
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        driver.manage().window().maximize();
 
         driver.get("https://selectorshub.com/xpath-practice-page/");
         Thread.sleep( 5000);
