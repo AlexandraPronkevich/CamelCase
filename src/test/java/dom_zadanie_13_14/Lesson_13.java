@@ -2,9 +2,9 @@ package dom_zadanie_13_14;
 
 public class Lesson_13 {
     public static void main(String[] args) {
-
-//// Задача №1
-
+//
+////// Задача №1
+//
         int i = 0;
         while (i < 16) {
 
@@ -12,10 +12,8 @@ public class Lesson_13 {
             i++;
         }
 
+//         Задача №2
 
-//
-////         Задача №2
-//
         int a2 = 5;
         int b2 = 2;
         do {
@@ -23,7 +21,6 @@ public class Lesson_13 {
             b2 = b2 + 2;
         }
         while (Math.pow(a2, b2) < 10000);
-
 
 // Задача №3
 
@@ -33,14 +30,16 @@ public class Lesson_13 {
                 System.out.println(x);
             }
 
-//            int y = 40;
-//            while (y <= 60) {
-//                if (y % 4 == 0) ;
-//                System.out.println(y);
-//                y = y + 1;
-//            }
+//        int y = 40;   // Данный вариант почему то не работает(((
+//        while (y <= 60) {
+//            if (y % 4 == 0) ;
+//            System.out.println(y);
+//            y = y + 1;
+//        }
+
         }
     }
+
 }
 
 
