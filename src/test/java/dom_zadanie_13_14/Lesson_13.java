@@ -30,6 +30,14 @@ public class Lesson_13 {
                 System.out.println(x);
             }
 
+            {
+
+                for (int z = 40; z <= 60; z++)
+                    if (z % 4 == 0) {
+                        System.out.println(z);
+                    }
+            }
+
 //        int y = 40;   // Данный вариант почему то не работает(((
 //        while (y <= 60) {
 //            if (y % 4 == 0) ;
@@ -37,10 +45,12 @@ public class Lesson_13 {
 //            y = y + 1;
 //        }
 
+
         }
     }
-
 }
+
+
 
 
 

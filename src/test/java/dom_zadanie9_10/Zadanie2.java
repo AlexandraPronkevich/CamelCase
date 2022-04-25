@@ -16,6 +16,6 @@ public class Zadanie2 {
         System.out.println("Число b нечетное ");
 
 
-//        System.out.println("Произведение = " + d);
+
     }
 }
