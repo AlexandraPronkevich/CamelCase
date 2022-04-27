@@ -1,4 +1,4 @@
-package selenium;
+package uroki;
 
 public class Lesson13_14 {
     public static void main(String[] args) {

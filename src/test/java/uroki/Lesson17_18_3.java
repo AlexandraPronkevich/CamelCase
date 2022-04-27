@@ -1,4 +1,4 @@
-package urok15_16;
+package uroki;
 
 public class Lesson17_18_3 {
     public static void main(String[] args){

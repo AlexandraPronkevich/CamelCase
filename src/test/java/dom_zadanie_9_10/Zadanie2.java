@@ -1,4 +1,4 @@
-package dom_zadanie9_10;
+package dom_zadanie_9_10;
 
 public class Zadanie2 {
     public static void main(String[] args) {

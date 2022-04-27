@@ -1,4 +1,4 @@
-package domzadanie_11_12;
+package dom_zadanie_11_12;
 import java.util.Scanner;
 
 public class Lesson11 {

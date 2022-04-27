@@ -1,6 +1,4 @@
-package urok15_16;
-
-import java.util.Arrays;
+package uroki;
 
 public class Lesson15_16 {
     public static void main(String[] args) {

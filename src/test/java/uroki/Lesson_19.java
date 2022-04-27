@@ -1,4 +1,4 @@
-package urok15_16;
+package uroki;
 
 public class Lesson_19 {
 
