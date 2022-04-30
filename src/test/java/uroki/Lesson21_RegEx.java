@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 public class Lesson21_RegEx {
     public static void main(String[] args) {
 
+        patternFind();
+        split();
         phoneMatch();
     }
 
