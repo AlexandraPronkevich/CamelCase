@@ -50,8 +50,7 @@ public class Lesson_15 {
         {
             int[][] array4 = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {-1, -2, -3, -4}, {-5, -6}};
             int sum = 0;
-            for (
-                    int i = 0;
+            for (int i = 0;
                     i < array4.length; i++) {
                 for (int j = 0; j < array4[i].length; j++) {
                     sum += array4[i][j];
@@ -64,8 +63,7 @@ public class Lesson_15 {
         {
             int[][] array5 = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {-1, -2, -3, -4}, {-5, -6}};
             int max = 0;
-            for (
-                    int c = 0;
+            for (int c = 0;
                     c < array5.length; c++) {
                 for (int d = 0; d < array5[c].length; d++) {
                     if (array5[c][d] > max) {
