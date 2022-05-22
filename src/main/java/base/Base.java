@@ -1,14 +1,17 @@
 package base;
 
-        import org.openqa.selenium.By;
-        import org.openqa.selenium.WebDriver;
-        import org.openqa.selenium.WebElement;
-        import org.openqa.selenium.chrome.ChromeDriver;
-        import org.testng.Assert;
-        import org.testng.annotations.AfterTest;
-        import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
-        import java.time.Duration;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class Base {
 
@@ -19,7 +22,7 @@ public class Base {
 
     @BeforeTest
     public void initializeDriver() {
-        System.setProperty("webdriver.chrome.driver", workPath);
+        System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -63,6 +66,61 @@ public class Base {
         Thread.sleep(1000);
 
         checkTitle();
+    }
+
+    public void addtocart() throws InterruptedException {
+        WebElement addtocartButton = driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));
+        addtocartButton.click();
+    }
+
+    public void shoppingcart() throws InterruptedException {
+        WebElement shoppingcartButton = driver.findElement(By.id("shopping_cart_container"));
+        shoppingcartButton.click();
+
+    }
+
+    public void remove() throws InterruptedException {
+        WebElement removeButton = driver.findElement(By.id("remove-sauce-labs-backpack"));
+        removeButton.click();
+
+    }
+
+    public void reactburgermenu() throws InterruptedException {
+        WebElement reactburgermenuButton = driver.findElement(By.id("react-burger-menu-btn"));
+        reactburgermenuButton.click();
+
+    }
+
+    public void logout() throws InterruptedException {
+        WebElement logoutButton = driver.findElement(By.id("logout_sidebar_link"));
+        logoutButton.click();
+
+    }
+
+
+    //ASSERT SORTING PRICES
+
+    public ArrayList<Double> getPriceItemsFromPage() {
+        List<WebElement> priceItems = driver.findElements(itemsPrice);
+        ArrayList<Double> price = new ArrayList<>();
+        for (int i = 0; i < priceItems.size(); i++) {
+            price.add(Double.parseDouble(priceItems.get(i).getText().replace("$", "")));
+        }
+        System.out.println(price);
+        return price;
+    }
+
+    private By itemsPrice = By.xpath("//div[@class='inventory_item_price']");
+
+    public ArrayList<Double> sortPriceLowToHigh() {
+        List<WebElement> priceItems = driver.findElements(itemsPrice);
+        ArrayList<Double> price = new ArrayList<>();
+        for (int i = 0; i < priceItems.size(); i++) {
+            price.add(Double.parseDouble(priceItems.get(i).getText().replace("$", "")));
+        }
+        price.sort(Comparator.naturalOrder());
+        System.out.println(price);
+        return price;
     }
 
 }
